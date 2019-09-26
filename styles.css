@@ -1,0 +1,79 @@
+/* CSS styles for http://strimmerlab.org (2015-) */
+
+body {
+  background-color: #eeeeee;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+ }
+ :link { color: #003399 }
+ :visited { color: #6699CC }
+
+A:link {text-decoration: none}
+A:visited {text-decoration: none}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline;}
+
+img {border-width:0px; }
+
+strong {color: #555555}
+
+li, table {text-align: left;}
+
+.sidenote {padding: 4px 4px; font-size: 80%;}
+
+
+/***************************************************
+LAYOUT BOXES
+***************************************************/
+
+* { box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;}
+
+#page { min-width:260px; max-width:1140px;
+        margin:0px auto;
+        border:dashed 1px #668866;background-color: #ffffff;
+        border-radius:15px;}
+
+#header { padding:5px 5px 5px 5px;
+          margin-top: 0px; margin-bottom: 0px;
+          color: #fba200; font-size: 140%; font-weight: bold; 
+          font-family: "Source Sans Pro", Arial, sans-serif;}
+
+#nav { padding:12px 5px; margin-bottom: 1em; margin-top: 0px; 
+       color: #666666; font-weight: bold;   font-size: 110%; 
+       font-family: "Source Sans Pro", Arial, sans-serif;}
+
+#main { position: relative;
+        margin-left: 1%;
+        text-align: justify;}
+
+#footer { padding:5px 5px 5px 5px;
+          margin-top: 0px; margin-bottom: 8px; margin-right: 0px;
+          font-size: 60%;
+          font-family: "Source Sans Pro", Arial, sans-serif;
+          text-align: right;overflow: auto;}
+
+/***************************************************
+PROPERTIES VARYING WITH SCREEN SIZE
+***************************************************/
+
+@media screen and (min-width:720px) {
+ #main { width: 71.5%;} 
+ .sidenote {position: absolute; left: 108%; width: 29%;
+           text-align: left;} 
+ img.iconsize {height: 128px;}
+}
+@media screen and (max-width:719px) { /* small screen */
+ #main { width: 97%; margin-right: 1%; text-align: left;} 
+ .sidenote { background-color: #FFEFD2; display: block;
+             text-align: center;
+             border-top-left-radius:15px;
+             border-top-right-radius:15px;
+             margin-top:10px;}
+ .sidenote::before {content: "\25BA\0020";}
+ img.iconsize {height: 52px;}
+}
+
+
